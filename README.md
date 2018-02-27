@@ -15,3 +15,12 @@ Windows1.init(null, "Mi Ventana", 250, 200, 600, 450, {minimize: true, maximize:
 Windows1.SetContent().Message("<p>Hola Mundo!</p>");
 Windows1.SetContent().FontSize("p", "1.5vmin");
 ```
+
+> Opciones de la clase
+
+Opcion        | Valor
+------------- | -------------
+id            | La id asignada a l a ventana
+clases        | Clases css personalizadas para customizar el modal
+claseTitulo   | Asigna la clase css para customizar el titulo de la ventana
+claseTexto    | Asigna la clase personal para customizar la fuente del titulo de la ventana
