@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Source Modal</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/WindowsInterface.css" rel="stylesheet">
+    <style>
+        .window .title .text{
+            color:#000000 !important;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="alert alert-info">
+            <strong>INFO</strong> Demo Source Modal JS
+        </div>
+        <ul>
+            <li style="color:#000000 !important">Aporte: TrinityCore</li>
+            <li style="color:#000000 !important">Foros del Web: <a href="http://www.forosdelweb.com/f179/aporte-window-modal-personalizable-1160996/" target="_blank">Ver Tema</a></li>
+        </ul>
+        
+        <button type="button" onClick="mostrar()" class="btn btn-primary">Ver Modal</button>
+        
+        
+    </div>
+    
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/resize-sensor.js"></script>
+    <script src="js/WindowsInterface.class.js"></script>
+
+    <script>
+        function mostrar(){
+            Windows1 = new WindowsInterface("muestra");
+            Windows1.init(null, "Mi Ventana", 250, 200, 600, 450, {minimize: true, maximize: true, close: true}, true);
+            Windows1.SetContent().Message("<p>Hola Mundo!</p>");
+            Windows1.SetContent().FontSize("p", "1.5vmin");
+        }
+    </script>
+</body>
+</html>
