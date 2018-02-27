@@ -1,6 +1,6 @@
-# source_modal
-Aporte de TrinityCore en Foros del Web
-http://www.forosdelweb.com/f179/aporte-window-modal-personalizable-1160996/
+# Source Modal
+## Aporte de TrinityCore en Foros del Web ##
+## [Tema Original Foros del Web](http://www.forosdelweb.com/f179/aporte-window-modal-personalizable-1160996/) ##
 
 > Ejemplo de configuración del Modal
 
