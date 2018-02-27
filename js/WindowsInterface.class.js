@@ -1,8 +1,8 @@
 class WindowsInterface{
 
 	constructor(IDSelector){
-		this.ID = IDSelector;
-		this.Window = ".window#"+IDSelector+"";
+		this.ID = IDSelector.id;
+		this.Window = ".window#"+IDSelector.id+"";
 		this.Icon;
 		this.Title;
 		this.Buttons = {Minimize: {active: false, position: {x: 0, y: 0}}, Maximize: {active: false, position: {x: 0, y: 0}}, Close: {Active: false}};
@@ -12,6 +12,10 @@ class WindowsInterface{
 		this.Height = 0;
 		this.Visible = false;
 		this.system = false;
+		this.clases = IDSelector.clases;
+		this.classTitulo = IDSelector.claseTitulo;
+		this.classTexto = IDSelector.claseTexto;
+
 		return this;
 	}
 
@@ -39,9 +43,9 @@ class WindowsInterface{
 
 	CreateWindow(){
 		var self = this;
-		$("body").append("<div id='"+this.ID+"' class='window'></div>");
-		$(this.Window).append("<div class='title' "+this.Icon+"></div>");
-		$(this.Window+" .title").append("<div class='text'>"+this.Title+"</div>");
+		$("body").append("<div id='"+this.ID+"' class='window "+self.clases+"'></div>");
+		$(this.Window).append("<div class='title "+self.classTitulo+"' "+this.Icon+"></div>");
+		$(this.Window+" .title").append("<div class='text "+self.classTexto+"'>"+this.Title+"</div>");
 		$(this.Window+" .title").append("<div class='buttons-actions'></div>");
 		if(this.Buttons.Minimize.active){
 			$(this.Window+" .title .buttons-actions").append("<div class='minimize'></div>");
